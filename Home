@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS 101: Intro to Artificial Intelligence</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <style>
+        /* Custom Styles for the Canvas Page */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f9fa; /* Light gray background */
+        }
+
+        .header-banner {
+            background-image: linear-gradient(rgba(0, 46, 90, 0.5), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1534723452862-4c874018d66d?auto=format&fit=crop&w=1740');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 5rem 2rem;
+            border-radius: 0.5rem;
+            font-family: 'Montserrat', sans-serif;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .quick-link-card {
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+            border: none;
+            border-radius: 0.75rem;
+        }
+
+        .quick-link-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .quick-link-card .card-body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 150px;
+        }
+
+        .quick-link-card i {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        /* Color palette for cards */
+        .icon-syllabus { color: #d9534f; }
+        .icon-modules { color: #5cb85c; }
+        .icon-assignments { color: #f0ad4e; }
+        .icon-announcements { color: #5bc0de; }
+        .icon-grades { color: #337ab7; }
+        .icon-zoom { color: #2980b9; }
+
+
+        .instructor-card {
+            background-color: #ffffff;
+            border-radius: 0.75rem;
+            padding: 2rem;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .instructor-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #00529b;
+        }
+
+        .content-section {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        .footer {
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container py-4">
+
+        <!-- Header Banner -->
+        <header class="header-banner text-center mb-5">
+            <h1 class="display-4">Introduction to Artificial Intelligence</h1>
+            <p class="lead">Exploring the frontier of intelligent machines and algorithms.</p>
+        </header>
+
+        <!-- Quick Links Section -->
+        <section class="mb-5">
+            <h2 class="text-center mb-4">Course Quick Links</h2>
+            <div class="row g-4">
+                <!-- NOTE: Replace "#" with your actual Canvas course links! -->
+                <div class="col-md-4 col-sm-6">
+                    <a href="#" class="text-decoration-none">
+                        <div class="card quick-link-card h-100 text-center">
+                            <div class="card-body">
+                                <i class="fas fa-file-alt icon-syllabus"></i>
+                                <h5 class="card-title">Syllabus</h5>
+                                <p class="card-text small text-muted">Course policies and schedule.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <a href="#" class="text-decoration-none">
+                        <div class="card quick-link-card h-100 text-center">
+                            <div class="card-body">
+                                <i class="fas fa-cubes icon-modules"></i>
+                                <h5 class="card-title">Modules</h5>
+                                <p class="card-text small text-muted">Weekly lessons and content.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <a href="#" class="text-decoration-none">
+                        <div class="card quick-link-card h-100 text-center">
+                            <div class="card-body">
+                                <i class="fas fa-tasks icon-assignments"></i>
+                                <h5 class="card-title">Assignments</h5>
+                                <p class="card-text small text-muted">Submit your work here.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <a href="#" class="text-decoration-none">
+                        <div class="card quick-link-card h-100 text-center">
+                            <div class="card-body">
+                                <i class="fas fa-bullhorn icon-announcements"></i>
+                                <h5 class="card-title">Announcements</h5>
+                                <p class="card-text small text-muted">Latest course updates.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <a href="#" class="text-decoration-none">
+                        <div class="card quick-link-card h-100 text-center">
+                            <div class="card-body">
+                                <i class="fas fa-check-double icon-grades"></i>
+                                <h5 class="card-title">Grades</h5>
+                                <p class="card-text small text-muted">Check your progress.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <a href="#" class="text-decoration-none">
+                        <div class="card quick-link-card h-100 text-center">
+                            <div class="card-body">
+                                <i class="fas fa-video icon-zoom"></i>
+                                <h5 class="card-title">Live Sessions</h5>
+                                <p class="card-text small text-muted">Join our class via Zoom.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Course Overview and Instructor Info -->
+        <section class="mb-5">
+            <div class="row g-4">
+                <!-- About the Course -->
+                <div class="col-lg-7">
+                    <div class="content-section h-100">
+                        <h3>About The Course</h3>
+                        <p>Welcome to the fascinating field of Artificial Intelligence. This course provides a broad introduction to the core concepts and techniques that enable machines to learn, reason, and act. We will explore the history of AI, understand foundational algorithms, and discuss the ethical implications of creating intelligent systems. Prepare to challenge your thinking and discover the potential of AI to solve real-world problems.</p>
+                        <h4>Key Topics:</h4>
+                        <ul>
+                            <li>Search Algorithms & Problem Solving</li>
+                            <li>Introduction to Machine Learning</li>
+                            <li>Neural Networks & Deep Learning</li>
+                            <li>Natural Language Processing (NLP)</li>
+                            <li>AI Ethics and Societal Impact</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Meet Your Instructor -->
+                <div class="col-lg-5">
+                    <div class="instructor-card text-center h-100">
+                        <!-- Placeholder image from placehold.co -->
+                        <img src="https://placehold.co/150x150/00529B/FFFFFF?text=PIC" alt="Instructor Photo" class="instructor-img mb-3">
+                        <h3 class="mb-1">Dr. Ada Lovelace</h3>
+                        <p class="text-muted">Professor of Computer Science</p>
+                        <p class="mb-4">Welcome to class! My passion is helping students discover the creativity and power of code. I look forward to guiding you on this journey.</p>
+                        
+                        <div class="mb-4">
+                            <h5 class="mb-2"><i class="fas fa-clock me-2"></i>Office Hours</h5>
+                            <p class="mb-0">Tuesdays & Thursdays, 2-4 PM</p>
+                        </div>
+
+                        <a href="#" class="btn btn-primary mt-auto">Contact Me</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center mt-5 footer">
+            <p>Junior College CS Department | Fall Semester 2025</p>
+        </footer>
+
+    </div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+
+
